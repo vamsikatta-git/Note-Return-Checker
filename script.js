@@ -66,6 +66,6 @@ function noteChecker()
   }
   
   else{
-    console.log("Input should not be empty or Enter a number")
+    error.textContent = "Input should not be empty"
   }
 }
