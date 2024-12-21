@@ -10,6 +10,7 @@ const number_20 = document.getElementById("number_of_20");
 const number_10 = document.getElementById("number_of_10");
 const number_5 = document.getElementById("number_of_5");
 const number_1 = document.getElementById("number_of_1");
+const total_amount_returned = document.getElementById("total_amount_returned")
 check.addEventListener("click",noteChecker);
 function noteChecker()
 {
@@ -32,6 +33,7 @@ function noteChecker()
     else if(cashValue>billValue)
     {
       let remaining_amount = cashValue-billValue;
+      total_amount_returned.textContent = `${remaining_amount}rs`;
       number_of_2000 = Math.floor(remaining_amount/2000);
       remaining_amount = remaining_amount%2000;
       number_of_500 = Math.floor(remaining_amount/500);
@@ -56,7 +58,6 @@ function noteChecker()
      number_10.textContent = number_of_10;
      number_5.textContent = number_of_5;
      number_1.textContent = number_of_1;
-
      error.textContent = "";
     }
     else{
