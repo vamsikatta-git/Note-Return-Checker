@@ -60,6 +60,10 @@ function noteChecker()
      number_1.textContent = number_of_1;
      error.textContent = "";
     }
+   else if(cashValue === billValue)
+    {
+      error.textContent = "No change Required"
+    }
     else{
       error.textContent = "Enter only in numbers";
     }
